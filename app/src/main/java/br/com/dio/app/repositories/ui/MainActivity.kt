@@ -12,6 +12,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     private val viewModel by viewModel<MainViewModel>()
+    private val adapter by lazy {RepoListAdapter()}
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,9 +20,18 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
+        binding.rvRepos.adapter = adapter
+
+        viewModel.getRepoList("Dojak220")
 
         viewModel.repos.observe(this) {
-
+            when(it) {
+                MainViewModel.State.Loading -> {}
+                is MainViewModel.State.Error -> {}
+                is MainViewModel.State.Success -> {
+                    adapter.submitList(it.list)
+                }
+            }
         }
     }
 
