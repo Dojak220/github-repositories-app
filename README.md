@@ -1,4 +1,7 @@
-# LAB - Criando um App para Apresentar seu Portfólio do GitHub
+# GitHub Repositories App
+Native Android app made in Kotlin to list all my Github repositories
+
+## LAB - Criando um App para Apresentar seu Portfólio do GitHub
 O curso pode ser acessado na plataforma da [Digital Innovation One](https://digitalinnovation.one/).
 
 ## Sobre as branchs do projeto
