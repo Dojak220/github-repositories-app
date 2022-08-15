@@ -2,7 +2,7 @@
 O curso pode ser acessado na plataforma da [Digital Innovation One](https://digitalinnovation.one/).
 
 ## Sobre as branchs do projeto
-A branch main possui o código final realizado pelo autor original. Já a branch developing possui as etapas realizadas por mim enquanto seguia o curso.
+A branch main possui o código final realizado pelo autor original. Já a branch final_code possui as etapas realizadas por mim enquanto seguia o curso e é a branch principal do projeto.
 
 
 ## Contatos do Autor do curso
